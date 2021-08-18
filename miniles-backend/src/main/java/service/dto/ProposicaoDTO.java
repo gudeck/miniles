@@ -1,7 +1,7 @@
-package Service.DTO;
+package service.dto;
 
-import Domain.Documento;
-import Domain.TipoProposicao;
+import domain.Documento;
+import domain.TipoProposicao;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
