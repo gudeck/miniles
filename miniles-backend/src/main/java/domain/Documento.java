@@ -12,11 +12,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "documento")
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
     private String texto;
+    @ManyToOne
+    @JoinColumn(name = "id_proposicao")
+    private long idProposiçao;
 }

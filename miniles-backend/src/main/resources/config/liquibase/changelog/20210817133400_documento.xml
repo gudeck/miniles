@@ -14,7 +14,7 @@
     <changeSet id="20210817133400-1" author="Adriel">
             <addForeignKeyConstraint baseTableName="documento"
                                      baseColumnNames="id_proposicao"
-                                     constraintName="LINK_PROPOSICAO"
+                                     constraintName="FK_LINK_PROPOSICAO"
                                      referencedTableName="proposicao"
                                      referencedColumnNames="id"/>
     </changeSet>

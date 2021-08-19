@@ -13,7 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "proposicao")
 public class Proposicao {
 
     @Id
@@ -25,10 +24,7 @@ public class Proposicao {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_tipo_proposicao")
     private TipoProposicao tipoProposicao;
-    @OneToMany
-    @JoinColumn(name = "id_proposicao")
     private List<Documento> documentos;
-
     private boolean regimeDeUrgencia = false;
 
 }

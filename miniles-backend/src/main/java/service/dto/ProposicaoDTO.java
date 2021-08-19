@@ -19,6 +19,6 @@ public class ProposicaoDTO {
     private long id;            //numero do documento
     private String ementa;
     private TipoProposicao tipoProposicao;
-    private List<Documento> comentario;
+    private List<Documento> decumentos;
     private boolean regimeDeUrgencia;
 }
