@@ -18,17 +18,17 @@ public class Proposicao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private long id;            //numero do documento
-    @Column(name = "ementa")
+    private long id;
     private String ementa;
+
+
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_tipoProposição")
+    @JoinColumn(name = "id_tipo_proposicao")
     private TipoProposicao tipoProposicao;
     @OneToMany
-    @JoinColumn(name = "id_proposicoes")
-    private List<Documento> comentario;
+    @JoinColumn(name = "id_proposicao")
+    private List<Documento> documentos;
 
-
+    private boolean regimeDeUrgencia = false;
 
 }

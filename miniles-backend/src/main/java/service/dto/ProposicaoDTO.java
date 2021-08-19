@@ -20,4 +20,5 @@ public class ProposicaoDTO {
     private String ementa;
     private TipoProposicao tipoProposicao;
     private List<Documento> comentario;
+    private boolean regimeDeUrgencia;
 }

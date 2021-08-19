@@ -16,10 +16,7 @@ import javax.persistence.*;
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private long id;
-    @Column(name = "nome")
     private String nome;
-    @Column(name = "texto")
     private String texto;
 }

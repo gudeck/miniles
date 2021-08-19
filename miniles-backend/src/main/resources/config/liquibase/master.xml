@@ -5,8 +5,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <include file="config/liquibase/changelog/20210817133400_documento.xml" relativeToChangelogFile="false"/>
+
+
+    <include file="config/liquibase/changelog/202108171307_tipoproposicao.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210817124200_proposicao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210817133400_documento.xml" relativeToChangelogFile="false"/>
+
+
 
 
 </databaseChangeLog>
