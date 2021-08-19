@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: min
-  liquibase:
-    change-log: classpath:/config/liquibase/master.xml
-#    drop-first: true
