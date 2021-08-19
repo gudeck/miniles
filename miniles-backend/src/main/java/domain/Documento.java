@@ -12,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +22,5 @@ public class Documento {
     @ManyToOne
     @JoinColumn(name = "id_proposicao")
     private long idProposiçao;
+
 }

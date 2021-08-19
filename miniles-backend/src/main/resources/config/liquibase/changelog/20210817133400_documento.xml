@@ -7,12 +7,15 @@
             </column>
             <column name="nome" type="varchar(40)"/>
             <column name="texto" type="varchar(300)"/>
+
             <column name="id_proposicao" type="bigint"/>
+
         </createTable>
     </changeSet>
 
     <changeSet id="20210817133400-1" author="Adriel">
             <addForeignKeyConstraint baseTableName="documento"
+
                                      baseColumnNames="id_proposicao"
                                      constraintName="fk_comentario_proposicao"
                                      referencedTableName="proposicao"
