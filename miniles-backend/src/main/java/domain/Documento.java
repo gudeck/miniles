@@ -12,14 +12,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "documento")
+
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private long id;
-    @Column(name = "nome")
     private String nome;
-    @Column(name = "texto")
     private String texto;
+    @ManyToOne
+    @JoinColumn(name = "id_proposicao")
+    private long idProposiçao;
+
 }

@@ -5,7 +5,7 @@ import service.dto.DocumentoDTO;
 
 import java.util.List;
 
-public interface  EntityMapper<D, E> {
+public interface EntityMapper<D, E> {
 
     E toEntity(D dto);
 
