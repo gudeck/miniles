@@ -4,7 +4,6 @@ import domain.Documento;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import repository.DocumentoRepository;
-import service.dto.DocumentoDTO;
 import service.erro.DocumentoNaoEncontrado;
 import service.mapper.DocumentoMappper;
 import java.util.List;
