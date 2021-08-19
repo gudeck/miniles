@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DocumentosDTO {
+public class DocumentoDTO {
 
     private long id;
     private String nome;
