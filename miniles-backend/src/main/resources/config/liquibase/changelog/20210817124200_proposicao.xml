@@ -6,15 +6,17 @@
             <constraints primaryKey="true"/>
         </column>
         <column name="ementa" type="varchar(2000)"/>
-        <column name="id_tipoProposicao" type="bigint"/>
+
+        <column name="id_tipo_proposicao" type="bigint"/>
+        <column name="regime_de_urgencia" type="boolean"/>
     </createTable>
 </changeSet>
 
-<!--    <changeSet id="20210817133400-1" author="Adriel">-->
-<!--        <addForeignKeyConstraint baseTableName="proposicao"-->
-<!--                                 baseColumnNames="id_tipoProposicao"-->
-<!--                                 constraintName="LINK_TIPOPROPOCISAO"-->
-<!--                                 referencedTableName="Tipo_proposicao"-->
-<!--                                 referencedColumnNames="id"/>-->
-<!--    </changeSet>-->
+    <changeSet id="20210817133400-1" author="Adriel">
+        <addForeignKeyConstraint baseTableName="proposicao"
+                                 baseColumnNames="id_tipo_proposicao"
+                                 constraintName="fk_proposicao_tipo_proposicao"
+                                 referencedTableName="tipo_proposicao"
+                                 referencedColumnNames="id"/>
+    </changeSet>
 </databaseChangeLog>
