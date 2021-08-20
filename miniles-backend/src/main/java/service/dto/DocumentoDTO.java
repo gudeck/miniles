@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class DocumentoDTO {
 
-    private long id;
+    private Long id;
     private String nome;
     private String texto;
 }

@@ -17,14 +17,14 @@ public class Proposicao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+
+    private Long id;
     private String ementa;
-
-
+    private Boolean regimeDeUrgencia = false;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_tipo_proposicao")
     private TipoProposicao tipoProposicao;
     private List<Documento> documentos;
-    private boolean regimeDeUrgencia = false;
+
 
 }

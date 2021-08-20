@@ -15,10 +15,10 @@ import javax.persistence.*;
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nome;
     private String texto;
     @ManyToOne
     @JoinColumn(name = "id_proposicao")
-    private long idProposiçao;
+    private Long idProposicao;
 }
