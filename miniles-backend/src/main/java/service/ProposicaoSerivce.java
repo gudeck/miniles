@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 
-public class PreposicaoSerivce {
+public class ProposicaoSerivce {
 
     private final ProposicaoRepository proposicaoRepository;
     private final ProposicaoMapper proposicaoMapper;
