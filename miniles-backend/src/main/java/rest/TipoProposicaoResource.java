@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import service.dto.TipoProposicaoDTO;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+
 @RequestMapping(value = "/api/tipoproposicao")
 @RestController
 @RequiredArgsConstructor
