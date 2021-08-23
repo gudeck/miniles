@@ -13,13 +13,13 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 
-public class ProposicaoSerivce {
+public class ProposicaoService {
 
     private final ProposicaoRepository proposicaoRepository;
     private final ProposicaoMapper proposicaoMapper;
 
 
-    public List<ProposicaoDTO> obterTdos() {
+    public List<ProposicaoDTO> obterTodos() {
         return proposicaoMapper.toDto(proposicaoRepository.findAll());
     }
 

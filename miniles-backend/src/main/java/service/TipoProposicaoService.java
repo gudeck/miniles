@@ -28,7 +28,7 @@ public class TipoProposicaoService {
         return tipoProposicaoMapper.toDto(tipoProposicao);
     }
 
-    public TipoProposicaoDTO salarTipoProposicao (TipoProposicaoDTO tipoProposicaoDTO) {
+    public TipoProposicaoDTO salvarTipoProposicao (TipoProposicaoDTO tipoProposicaoDTO) {
         TipoProposicao tipoProposicao = tipoProposicaoMapper.toEntity(tipoProposicaoDTO);
         TipoProposicao tipoProposicaoSalvo = tipoProposicaoRepository.save(tipoProposicao);
         return  tipoProposicaoMapper.toDto(tipoProposicaoSalvo);
