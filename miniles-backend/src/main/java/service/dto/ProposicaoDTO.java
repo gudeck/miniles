@@ -16,9 +16,9 @@ import java.util.List;
 @NoArgsConstructor
 public class ProposicaoDTO {
 
-    private long id;
+    private Long id;
     private String ementa;
-    private boolean regimeDeUrgencia;
+    private Boolean regimeDeUrgencia;
     private TipoProposicao tipoProposicao;
     private List<Documento> documentos;
 
