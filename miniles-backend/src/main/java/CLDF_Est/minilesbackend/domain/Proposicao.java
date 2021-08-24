@@ -1,4 +1,4 @@
-package domain;
+package CLDF_Est.minilesbackend.domain;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,13 +17,17 @@ public class Proposicao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
+
     private String ementa;
+
     private Boolean regimeDeUrgencia = false;
-    @ManyToOne(cascade = CascadeType.ALL)
+
+    @ManyToOne
     @JoinColumn(name = "id_tipo_proposicao")
     private TipoProposicao tipoProposicao;
+
+    @OneToMany(mappedBy = "proposicao")
     private List<Documento> documentos;
 
 

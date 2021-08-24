@@ -1,24 +1,18 @@
-package domain;
+package CLDF_Est.minilesbackend.service.dto;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Documento {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DocumentoDTO {
+
     private Long id;
     private String nome;
     private String texto;
-    @ManyToOne
-    @JoinColumn(name = "id_proposicao")
-    private Long idProposicao;
 }

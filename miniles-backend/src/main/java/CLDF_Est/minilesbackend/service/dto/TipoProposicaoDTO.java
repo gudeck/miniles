@@ -1,4 +1,4 @@
-package service.dto;
+package CLDF_Est.minilesbackend.service.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -10,9 +10,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DocumentoDTO {
+public class TipoProposicaoDTO {
 
     private Long id;
     private String nome;
-    private String texto;
+    private String sigla;
+
+
 }

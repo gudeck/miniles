@@ -1,13 +1,13 @@
-package service;
+package CLDF_Est.minilesbackend.service;
 
 
-import domain.TipoProposicao;
+import CLDF_Est.minilesbackend.domain.TipoProposicao;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.TipoProposicaoRepository;
-import service.dto.TipoProposicaoDTO;
-import service.erro.TipoProposicaoNaoEncontrado;
-import service.mapper.TipoProposicaoMapper;
+import CLDF_Est.minilesbackend.repository.TipoProposicaoRepository;
+import CLDF_Est.minilesbackend.service.dto.TipoProposicaoDTO;
+import CLDF_Est.minilesbackend.service.erro.TipoProposicaoNaoEncontrado;
+import CLDF_Est.minilesbackend.service.mapper.TipoProposicaoMapper;
 
 import java.util.List;
 

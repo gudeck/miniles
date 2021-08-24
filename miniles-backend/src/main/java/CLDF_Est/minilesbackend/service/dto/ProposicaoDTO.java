@@ -1,7 +1,7 @@
-package service.dto;
+package CLDF_Est.minilesbackend.service.dto;
 
-import domain.Documento;
-import domain.TipoProposicao;
+import CLDF_Est.minilesbackend.domain.Documento;
+import CLDF_Est.minilesbackend.domain.TipoProposicao;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

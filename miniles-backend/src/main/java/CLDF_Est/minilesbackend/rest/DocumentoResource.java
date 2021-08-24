@@ -1,25 +1,28 @@
-package rest;
+package CLDF_Est.minilesbackend.rest;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.DocumentoService;
-import service.dto.DocumentoDTO;
+import CLDF_Est.minilesbackend.service.DocumentoService;
+import CLDF_Est.minilesbackend.service.dto.DocumentoDTO;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/documento")
+@RequiredArgsConstructor
 public class DocumentoResource {
 
-    DocumentoService documentoService;
+    private final DocumentoService documentoService;
 
     @GetMapping
     public ResponseEntity<List<DocumentoDTO>> exibirDocumentos(){
 
         return ResponseEntity.ok(documentoService.obterTodos());
     }
+    @RequestMapping(value = "/id")
     @GetMapping
     public ResponseEntity<DocumentoDTO> buscarDocumentoPorId(@PathVariable("id") long id){
 

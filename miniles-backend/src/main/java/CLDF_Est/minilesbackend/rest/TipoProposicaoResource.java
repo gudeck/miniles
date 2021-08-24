@@ -1,12 +1,12 @@
-package rest;
+package CLDF_Est.minilesbackend.rest;
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.TipoProposicaoService;
-import service.dto.TipoProposicaoDTO;
+import CLDF_Est.minilesbackend.service.TipoProposicaoService;
+import CLDF_Est.minilesbackend.service.dto.TipoProposicaoDTO;
 
 import java.util.List;
 
@@ -16,13 +16,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TipoProposicaoResource {
 
-    TipoProposicaoService tipoProposicaoService;
+    private final TipoProposicaoService tipoProposicaoService;
 
 
     @GetMapping
     public ResponseEntity<List<TipoProposicaoDTO>> exibirTipos(){
         return ResponseEntity.ok(tipoProposicaoService.obterTodos());
     }
+    @RequestMapping(value = "/id")
     @GetMapping
     public ResponseEntity<TipoProposicaoDTO> buscarTipo( @PathVariable("id") long id){
         return new ResponseEntity<>(tipoProposicaoService.obterPorId(id),HttpStatus.OK);

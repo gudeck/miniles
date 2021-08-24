@@ -1,6 +1,6 @@
-package repository;
+package CLDF_Est.minilesbackend.repository;
 
-import domain.Documento;
+import CLDF_Est.minilesbackend.domain.Documento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

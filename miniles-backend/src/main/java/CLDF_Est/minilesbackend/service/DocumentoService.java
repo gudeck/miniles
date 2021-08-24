@@ -1,12 +1,12 @@
-package service;
+package CLDF_Est.minilesbackend.service;
 
-import domain.Documento;
+import CLDF_Est.minilesbackend.domain.Documento;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.DocumentoRepository;
-import service.dto.DocumentoDTO;
-import service.erro.DocumentoNaoEncontrado;
-import service.mapper.DocumentoMappper;
+import CLDF_Est.minilesbackend.repository.DocumentoRepository;
+import CLDF_Est.minilesbackend.service.dto.DocumentoDTO;
+import CLDF_Est.minilesbackend.service.erro.DocumentoNaoEncontrado;
+import CLDF_Est.minilesbackend.service.mapper.DocumentoMappper;
 import java.util.List;
 
 @Service

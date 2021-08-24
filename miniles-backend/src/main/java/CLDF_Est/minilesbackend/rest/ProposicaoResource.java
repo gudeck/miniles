@@ -1,29 +1,31 @@
-package rest;
+package CLDF_Est.minilesbackend.rest;
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.ProposicaoService;
-import service.dto.ProposicaoDTO;
+import CLDF_Est.minilesbackend.service.ProposicaoService;
+import CLDF_Est.minilesbackend.service.dto.ProposicaoDTO;
 
 import java.util.List;
 
 
-@RequestMapping(value = "/api/proposicao")
+
 @RestController
+@RequestMapping(value ="/api/proposicao")
 @RequiredArgsConstructor
 public class ProposicaoResource {
 
 
-    ProposicaoService proposicaoService;
+    private final  ProposicaoService proposicaoService;
 
     @GetMapping
-    public ResponseEntity<List<ProposicaoDTO>> exibirPreposicoes(){
+    public ResponseEntity<List<ProposicaoDTO>> exibirProposicoes(){
 
         return ResponseEntity.ok(proposicaoService.obterTodos());
     }
+    @RequestMapping(value = "/id")
     @GetMapping
     public ResponseEntity<ProposicaoDTO> buscarProposicaoPorId(@PathVariable("id") long id){
         return new ResponseEntity<>(proposicaoService.obterPorId(id),HttpStatus.OK);

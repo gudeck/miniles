@@ -1,3 +1,4 @@
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
 import { Proposicao } from 'src/app/models/Proposicao';
 import { ProposicaoService } from 'src/app/service/propsicao.service';
@@ -17,7 +18,9 @@ export class ProposicaoComponent implements OnInit {
   
       rows = 10;
   
-      constructor(private proposicaoService: ProposicaoService) { }
+      constructor(private proposicaoService: ProposicaoService) {
+          
+       }
   
       ngOnInit() {
           this.proposicaoService.listar<Proposicao>().subscribe(proposicao => this.proposicao = proposicao);

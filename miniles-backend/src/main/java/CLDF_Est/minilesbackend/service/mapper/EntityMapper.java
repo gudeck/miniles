@@ -1,7 +1,4 @@
-package service.mapper;
-
-import domain.Documento;
-import service.dto.DocumentoDTO;
+package CLDF_Est.minilesbackend.service.mapper;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package domain;
+package CLDF_Est.minilesbackend.domain;
 
 import lombok.Getter;
 import lombok.Setter;

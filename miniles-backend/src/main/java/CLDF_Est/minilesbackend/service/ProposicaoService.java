@@ -1,18 +1,17 @@
-package service;
+package CLDF_Est.minilesbackend.service;
 
 
-import domain.Proposicao;
+import CLDF_Est.minilesbackend.domain.Proposicao;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.ProposicaoRepository;
-import service.dto.ProposicaoDTO;
-import service.erro.ProposicaoNaoEncontrada;
-import service.mapper.ProposicaoMapper;
+import CLDF_Est.minilesbackend.repository.ProposicaoRepository;
+import CLDF_Est.minilesbackend.service.dto.ProposicaoDTO;
+import CLDF_Est.minilesbackend.service.erro.ProposicaoNaoEncontrada;
+import CLDF_Est.minilesbackend.service.mapper.ProposicaoMapper;
 
 import java.util.List;
 @Service
 @RequiredArgsConstructor
-
 public class ProposicaoService {
 
     private final ProposicaoRepository proposicaoRepository;
