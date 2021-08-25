@@ -29,7 +29,7 @@ export class ProposicaoComponent implements OnInit {
               { field: 'id', header: 'Id' },
               { field: 'ementa', header: 'ementa' },
               { field: 'regimeDeUrgencia', header: 'Regime de Urgência' },
-              { field: 'tipoProposicao.sigla', header: 'Tipo Proposiçao'}
+              { field: 'tipoProposicao', header: 'Tipo Proposiçao'}
         
           ];
       }
