@@ -2,6 +2,7 @@ package CLDF_Est.minilesbackend.service;
 
 
 import CLDF_Est.minilesbackend.domain.Proposicao;
+import CLDF_Est.minilesbackend.service.dto.ProposicaoListDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import CLDF_Est.minilesbackend.repository.ProposicaoRepository;
@@ -18,8 +19,8 @@ public class ProposicaoService {
     private final ProposicaoMapper proposicaoMapper;
 
 
-    public List<ProposicaoDTO> obterTodos() {
-        return proposicaoMapper.toDto(proposicaoRepository.findAll());
+    public List<ProposicaoListDTO> obterTodos() {
+        return proposicaoRepository.listagem();
     }
 
 

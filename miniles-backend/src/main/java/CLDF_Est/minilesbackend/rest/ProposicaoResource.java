@@ -1,6 +1,7 @@
 package CLDF_Est.minilesbackend.rest;
 
 
+import CLDF_Est.minilesbackend.service.dto.ProposicaoListDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class ProposicaoResource {
     private final  ProposicaoService proposicaoService;
 
     @GetMapping
-    public ResponseEntity<List<ProposicaoDTO>> exibirProposicoes(){
+    public ResponseEntity<List<ProposicaoListDTO>> exibirProposicoes(){
 
         return ResponseEntity.ok(proposicaoService.obterTodos());
     }
