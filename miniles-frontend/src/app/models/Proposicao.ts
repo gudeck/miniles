@@ -6,7 +6,7 @@ export class Proposicao{
 id?: number;
 ementa: String;
 regimeDeUrgencia: boolean;
-tipoPtoposicao: TipoProposicao;
+tipoProposicao: TipoProposicao;
 documentos?: Documento[];
 
 }

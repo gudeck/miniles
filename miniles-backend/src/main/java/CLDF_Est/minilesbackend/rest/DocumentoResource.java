@@ -22,8 +22,8 @@ public class DocumentoResource {
 
         return ResponseEntity.ok(documentoService.obterTodos());
     }
-    @RequestMapping(value = "/id")
-    @GetMapping
+
+    @GetMapping("/{id}")
     public ResponseEntity<DocumentoDTO> buscarDocumentoPorId(@PathVariable("id") long id){
 
         return new ResponseEntity<>(documentoService.obterTodosPorId(id), HttpStatus.OK);
@@ -37,7 +37,7 @@ public class DocumentoResource {
 
         return ResponseEntity.ok(documentoService.salvarDocumento(documento));
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarDocumento(@PathVariable("id") long id){
         documentoService.deletar(id);
         return new ResponseEntity<>(HttpStatus.OK);

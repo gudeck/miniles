@@ -1,5 +1,6 @@
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
+import { Button } from 'primeng';
 import { Proposicao } from 'src/app/models/Proposicao';
 import { ProposicaoService } from 'src/app/service/propsicao.service';
 
@@ -23,15 +24,15 @@ export class ProposicaoComponent implements OnInit {
        }
   
       ngOnInit() {
-          this.proposicaoService.listar<Proposicao>().subscribe(proposicao => this.proposicao = proposicao);
+          this.proposicaoService.listar<Proposicao>().subscribe(element => this.proposicao = element);
   
-          this.colunas = [
-              { field: 'id', header: 'Id' },
-              { field: 'ementa', header: 'ementa' },
-              { field: 'regimeDeUrgencia', header: 'Regime de Urgência' },
-              { field: 'tipoProposicao', header: 'Tipo Proposiçao'}
-        
-          ];
+        //   this.colunas = [
+              
+        //       { field: 'ementa', header: 'Ementa' },
+        //       { field: 'regimeDeUrgencia', header: 'Regime de Urgência' },
+        //       { field: 'tipoProposicao', header: 'Tipo Proposiçao'},
+        //       { field: 'id', header: 'Numero Do Documento' }
+        //   ];
       }
   
       next() {

@@ -2,7 +2,9 @@ package CLDF_Est.minilesbackend.service;
 
 
 import CLDF_Est.minilesbackend.domain.TipoProposicao;
+import CLDF_Est.minilesbackend.service.erro.DatabaseExceptions;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import CLDF_Est.minilesbackend.repository.TipoProposicaoRepository;
 import CLDF_Est.minilesbackend.service.dto.TipoProposicaoDTO;
@@ -36,7 +38,11 @@ public class TipoProposicaoService {
 
 
     public void deletarPorId (Long id) {
+        try {
         tipoProposicaoRepository.deleteById(id);
+        }catch (DataIntegrityViolationException e){
+            throw new DatabaseExceptions("Erro de violação de integridade !");
+        }
     }
 
 

@@ -1,17 +1,16 @@
 <h2>PROPOSIÇÕES</h2>
-<p-table [columns]="colunas" [value]="proposicao" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+<p-table [value]="proposicao" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
     <ng-template class="tabela" pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">
-                {{col.header}}
-            </th>
+            <th>Sigla</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr>
-            <td *ngFor="let col of columns">
-                {{rowData[col.field]}} 
+            <td>
+                {{ rowData.tipoProposicao.sigla }}
+                <button></button>
             </td>
         </tr>
     </ng-template>

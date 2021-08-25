@@ -23,8 +23,8 @@ public class TipoProposicaoResource {
     public ResponseEntity<List<TipoProposicaoDTO>> exibirTipos(){
         return ResponseEntity.ok(tipoProposicaoService.obterTodos());
     }
-    @RequestMapping(value = "/id")
-    @GetMapping
+
+    @GetMapping("/{id}")
     public ResponseEntity<TipoProposicaoDTO> buscarTipo( @PathVariable("id") long id){
         return new ResponseEntity<>(tipoProposicaoService.obterPorId(id),HttpStatus.OK);
     }
@@ -39,7 +39,7 @@ public class TipoProposicaoResource {
         return ResponseEntity.ok(tipoProposicaoService.salvarTipoProposicao(tipoProposicao));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarTipo(@PathVariable("id") long id){
             tipoProposicaoService.deletarPorId(id);
             return new ResponseEntity<>(HttpStatus.OK);

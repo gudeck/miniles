@@ -25,8 +25,8 @@ public class ProposicaoResource {
 
         return ResponseEntity.ok(proposicaoService.obterTodos());
     }
-    @RequestMapping(value = "/id")
-    @GetMapping
+
+    @GetMapping("/{id}")
     public ResponseEntity<ProposicaoDTO> buscarProposicaoPorId(@PathVariable("id") long id){
         return new ResponseEntity<>(proposicaoService.obterPorId(id),HttpStatus.OK);
 
@@ -40,7 +40,7 @@ public class ProposicaoResource {
     public ResponseEntity<ProposicaoDTO> atualizarProposicao(@RequestBody ProposicaoDTO proposicao){
         return  ResponseEntity.ok(proposicaoService.salvarProposicao(proposicao));
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarProposicao(@PathVariable("id") long id){
             proposicaoService.deletarPorId(id);
         return new ResponseEntity<>(HttpStatus.OK);

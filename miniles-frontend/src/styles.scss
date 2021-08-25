@@ -13,18 +13,18 @@ body {
             & > tr > th {
                 font-weight: bold;
                 font-size: 16px;
-                background-color: $header-footer-color;
+                background-color:whitesmoke;
             }
         }
 
         .ui-table-tbody > tr {
-            background-color: #ddd3ee;
+            background-color: #ffffff;
 
             &:nth-child(odd) {
-                background-color: $hover-color;
+                background-color:rgba(100, 148, 237, 0.411);
 
                 &.ui-state-highlight {
-                    background-color: $highlight-color;
+                    background-color: white;
                 }
             }
 
