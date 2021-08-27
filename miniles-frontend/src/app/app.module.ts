@@ -14,6 +14,10 @@ import { AppTopbarComponent } from './components/topbar/app.topbar.component';
 import { SharedModule } from './shared/shared.module';
 import { ProposicaoComponent } from './components/proposicao/proposicao.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProposicaoReadComponent } from './components/proposicao/proposicao-read/proposicao-read.component';
+
+
+
 
 @NgModule({
     declarations: [
@@ -21,7 +25,11 @@ import { HomeComponent } from './components/home/home.component';
         AppTopbarComponent,
         AppFooterComponent,
         ProposicaoComponent,
-        HomeComponent
+        HomeComponent,
+        ProposicaoReadComponent,
+
+
+
     ],
     imports: [
         BlockUIModule.forRoot({

@@ -11,8 +11,14 @@ import java.util.List;
 @Repository
 public interface ProposicaoRepository extends JpaRepository <Proposicao, Long> {
 
-    @Query("select new CLDF_Est.minilesbackend.service.dto.ProposicaoListDTO(p.id, p.tipoProposicao.sigla, p.tipoProposicao.nome, p.ementa,  count(pd.id)) from Proposicao p join p.documentos pd group by p.id, p.tipoProposicao.sigla, p.tipoProposicao.nome, p.ementa")
-    List<ProposicaoListDTO> listagem();
+//    @Query("select new CLDF_Est.minilesbackend.service.dto.ProposicaoListDTO(p.id, p.tipoProposicao.sigla, p.tipoProposicao.nome, p.ementa,  count(pd.id)) from Proposicao p join p.documentos pd group by p.id, p.tipoProposicao.sigla, p.tipoProposicao.nome, p.ementa")
+//    List<ProposicaoListDTO>
+//    listagem();
+
+
+
+
+
 
 
 

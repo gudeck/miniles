@@ -1,7 +1,8 @@
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
+
 import { Component, OnInit } from '@angular/core';
-import { Button } from 'primeng';
+import { Router } from '@angular/router';
 import { Proposicao } from 'src/app/models/Proposicao';
+import { ProposicaoList } from 'src/app/models/ProposicaoList';
 import { ProposicaoService } from 'src/app/service/propsicao.service';
 
 @Component({
@@ -11,7 +12,8 @@ import { ProposicaoService } from 'src/app/service/propsicao.service';
 })
 export class ProposicaoComponent implements OnInit {
 
-  proposicao: Proposicao[] = [];
+  proposicaoList: ProposicaoList[] = [];
+  selecaoPropsicaoList: ProposicaoList;
   
       colunas: any[];
   
@@ -19,20 +21,19 @@ export class ProposicaoComponent implements OnInit {
   
       rows = 10;
   
-      constructor(private proposicaoService: ProposicaoService) {
+      constructor(private proposicaoService: ProposicaoService, private router: Router) {
           
        }
   
       ngOnInit() {
-          this.proposicaoService.listar<Proposicao>().subscribe(element => this.proposicao = element);
+          this.proposicaoService.listar<ProposicaoList>().subscribe(element => this.proposicaoList = element);
+
   
-        //   this.colunas = [
-              
-        //       { field: 'ementa', header: 'Ementa' },
-        //       { field: 'regimeDeUrgencia', header: 'Regime de Urgência' },
-        //       { field: 'tipoProposicao', header: 'Tipo Proposiçao'},
-        //       { field: 'id', header: 'Numero Do Documento' }
-        //   ];
+      }
+
+      urgencia(){
+        
+
       }
   
       next() {
@@ -48,11 +49,20 @@ export class ProposicaoComponent implements OnInit {
       }
   
       isLastPage(): boolean {
-          return this.first === (this.proposicao.length - this.rows);
+          return this.first === (this.proposicaoList.length - this.rows);
       }
   
       isFirstPage(): boolean {
           return this.first === 0;
       }
+
+      isBotaoDesativado(): boolean{
+          return !this.selecaoPropsicaoList;
+
+      }
+      navigateToReadP(){
+        this.router.navigate(['proposicao/read', this.selecaoPropsicaoList.id]);
+      }
+
   
   }

@@ -1,13 +1,14 @@
-$base-color: #f4f2f9;
-$hover-color: #706b796c;
-$highlight-color: #5d5b61;
+$base-color:white;
+$hover-color: #888a896c;
+$highlight-color: #114129;
 $header-footer-color: #033E3E;
 
 body {
-    background-color: #f3effc;
+    background-color:white;
 
     .ui-table {
         text-align: center;
+        width: 99%;
 
         .ui-table-thead, .ui-table-tfoot {
             & > tr > th {
@@ -19,7 +20,7 @@ body {
         }
 
         .ui-table-tbody > tr {
-            background-color: #ddd3ee;
+            background-color: white;
 
             &:nth-child(odd) {
                 background-color: $hover-color;

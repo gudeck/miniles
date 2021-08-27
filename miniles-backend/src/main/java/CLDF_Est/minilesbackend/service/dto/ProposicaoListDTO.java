@@ -12,9 +12,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ProposicaoListDTO {
 
+//    private Long id;
+//    private String sigla;
+    private TipoProposicaoDTO tipoProposicao;
     private Long id;
-    private String sigla;
-    private String nome;
     private String ementa;
-    private Long numeroDeDocumentos;
+    private Integer numeroDeDocumentos;
+    private Boolean regimeDeUrgencia = false;
 }

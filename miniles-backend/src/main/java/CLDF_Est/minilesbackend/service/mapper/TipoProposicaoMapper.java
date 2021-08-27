@@ -6,4 +6,6 @@ import CLDF_Est.minilesbackend.service.dto.TipoProposicaoDTO;
 
 @Mapper(componentModel = "spring")
 public interface TipoProposicaoMapper extends EntityMapper<TipoProposicaoDTO,TipoProposicao> {
+
+
 }

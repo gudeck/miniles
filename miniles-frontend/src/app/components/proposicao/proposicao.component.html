@@ -1,30 +1,62 @@
-<h2>PROPOSIÇÕES</h2>
-<p-table [value]="proposicao" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
-    <ng-template class="tabela" pTemplate="header" let-columns>
-        
-        <tr>
-            <th>Ementa</th>
-            <th>Sigla</th>
-            <th>Regime de Urgência</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr>
-            <td>
-                {{ rowData.ementa }}
-            </td>
-            
-            <td>
-                {{ rowData.tipoProposicao.sigla }}
-               
-            </td>
-            <td>
-                {{ rowData.regimeDeUrgencia}}
-            </td>
+<p-panel>
+    <h2>PROPOSIÇÕES </h2>
+    <div class="p-grid">
+        <div class="p-col-12">
+            <button pButton type="button" label="Criar" icon="pi pi-plus" iconPos="left" ></button>
+        </div>
+        <div class="p-col-11">
+            <p-table [value]="proposicaoList" selectionMode="single" [(selection)]="selecaoPropsicaoList" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+                currentPageReportTemplate="Exibindo{first} a {last} de {totalRecords}">
 
-        </tr>
-    </ng-template>
-</p-table>
+                <ng-template  pTemplate="header" let-columns>
+
+                    <tr>
+
+                        <th>Tipo De Proposição <i class="pi pi-sort"></i> </th>
+                        <th>Ementa <i class="pi pi-sort"></i> </th>
+                        <th>Regime de Urgência <i class="pi pi-sort"></i> </th>
+                        <th>Número de Documentos <i class="pi pi-sort"></i> </th>
+
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+
+                        <td>
+                            {{ rowData.tipoProposicao.nome }} - {{ rowData.tipoProposicao.sigla }}
+
+                        </td>
+                        <td>
+                            {{ rowData.ementa }}
+                        </td>
+
+                        <td>
+                            {{ rowData.regimeDeUrgencia}}
+                        </td>
+
+                        <td>
+                            {{ rowData.numeroDeDocumentos }}
+                        </td>
+                    </tr>
+
+                </ng-template>
+
+            </p-table>
 
 
+        </div>
+        <div class="p-col-1">
+            <div class="p-grid">
+                <div class="p-col-12">
+                    <button pButton type="button"  icon="pi pi-plus" iconPos="left" [disabled]="isBotaoDesativado()"(click)="navigateToReadP()"></button>
+                </div>
+                <div class="p-col-12">
+                    <button pButton type="button"  icon="pi pi-plus" iconPos="left" [disabled]="isBotaoDesativado()"></button>
+                </div>
+                <div class="p-col-12">
+                    <button pButton type="button" icon="pi pi-plus" iconPos="left" [disabled]="isBotaoDesativado()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</p-panel>`
