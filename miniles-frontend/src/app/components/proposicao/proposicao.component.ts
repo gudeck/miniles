@@ -13,7 +13,7 @@ import { ProposicaoService } from 'src/app/service/propsicao.service';
 export class ProposicaoComponent implements OnInit {
 
   proposicaoList: ProposicaoList[] = [];
-  selecaoPropsicaoList: ProposicaoList;
+  selecaoPropsicaoList = new ProposicaoList;
   
       colunas: any[];
   
@@ -63,6 +63,12 @@ export class ProposicaoComponent implements OnInit {
       navigateToReadP(){
         this.router.navigate(['proposicao/read', this.selecaoPropsicaoList.id]);
       }
+
+      display: boolean = false;
+
+    showUpdate(){
+        this.display = true;
+    }
 
   
   }

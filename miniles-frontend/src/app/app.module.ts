@@ -15,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
 import { ProposicaoComponent } from './components/proposicao/proposicao.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProposicaoReadComponent } from './components/proposicao/proposicao-read/proposicao-read.component';
+import { ProposicaoUpdateComponent } from './components/proposicao/proposicao-update/proposicao-update.component';
 
 
 
@@ -27,6 +28,7 @@ import { ProposicaoReadComponent } from './components/proposicao/proposicao-read
         ProposicaoComponent,
         HomeComponent,
         ProposicaoReadComponent,
+        ProposicaoUpdateComponent,
 
 
 

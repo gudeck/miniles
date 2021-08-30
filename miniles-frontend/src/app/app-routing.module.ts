@@ -14,7 +14,7 @@ const routes: Routes = [
         component: ProposicaoComponent
     },
     {
-        path: 'proposicao/read',
+        path: 'proposicao/read/:id',
         component: ProposicaoReadComponent
     }
 
