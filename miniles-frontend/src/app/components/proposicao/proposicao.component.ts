@@ -64,11 +64,9 @@ export class ProposicaoComponent implements OnInit {
         this.router.navigate(['proposicao/read', this.selecaoPropsicaoList.id]);
       }
 
-      display: boolean = false;
-
-    showUpdate(){
-        this.display = true;
-    }
+      navigateToUpdate(){
+          this.router.navigate(['proposicao/update', this.selecaoPropsicaoList.id])
+      }
 
   
   }
