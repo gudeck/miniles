@@ -1,24 +1,26 @@
-$base-color: #f4f2f9;
-$hover-color: #cec1e7;
-$highlight-color: #442c72;
-$header-footer-color: #b19cd9;
+$base-color:white;
+$hover-color: #ffffff;
+$highlight-color: #114129;
+$header-footer-color: #033E3E;
 
 body {
-    background-color: #f3effc;
+    background-color:white;
 
     .ui-table {
         text-align: center;
+        width: 99%;
 
         .ui-table-thead, .ui-table-tfoot {
             & > tr > th {
                 font-weight: bold;
                 font-size: 16px;
                 background-color: $header-footer-color;
+                color: white;
             }
         }
 
         .ui-table-tbody > tr {
-            background-color: #ddd3ee;
+            background-color: white;
 
             &:nth-child(odd) {
                 background-color: $hover-color;

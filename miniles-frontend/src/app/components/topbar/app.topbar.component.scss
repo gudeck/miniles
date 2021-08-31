@@ -1,10 +1,15 @@
-$background-color: #41c774;
+
+
 
 .topbar {
-    background-color: $background-color;
+    background-image: linear-gradient( to right,#024717, #048a21, #ffffff);
     
     .topbar-left {
-        background-color: $background-color;
+        background-image: linear-gradient( to right,#018b2b, #048a21, #ffffff);
     }
 }
 
+.l2{
+    margin-top: 3.1%;
+    background-color: rgb(251, 255, 0);
+}

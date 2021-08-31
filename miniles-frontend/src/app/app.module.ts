@@ -12,12 +12,26 @@ import { AppComponent } from './app.component';
 import { AppFooterComponent } from './components/footer/app.footer.component';
 import { AppTopbarComponent } from './components/topbar/app.topbar.component';
 import { SharedModule } from './shared/shared.module';
+import { ProposicaoComponent } from './components/proposicao/proposicao.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProposicaoReadComponent } from './components/proposicao/proposicao-read/proposicao-read.component';
+import { ProposicaoUpdateComponent } from './components/proposicao/proposicao-update/proposicao-update.component';
+
+
+
 
 @NgModule({
     declarations: [
         AppComponent,
         AppTopbarComponent,
-        AppFooterComponent
+        AppFooterComponent,
+        ProposicaoComponent,
+        HomeComponent,
+        ProposicaoReadComponent,
+        ProposicaoUpdateComponent,
+
+
+
     ],
     imports: [
         BlockUIModule.forRoot({

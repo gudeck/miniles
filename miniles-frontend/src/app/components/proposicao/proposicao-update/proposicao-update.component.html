@@ -1,0 +1,66 @@
+<h1>Editar Proposição</h1>
+
+<div class="card">
+    <h1 class="first"> <b>Tipo de Proposição</b> </h1>
+    <p-dropdown [options]="tipos" placeholder="Selecione o tipo de Proposição" [showClear]="true">
+    </p-dropdown>
+    <p-checkbox class="check" name="group1" value="New York" label="Regime de Urgência" [(ngModel)]="selectedCities" inputId="ny">
+    </p-checkbox>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h1> <b>Ementa</b> </h1>
+    <div class="p-formgroup-inline">
+        <textarea class="campo" pInputTextarea [(ngModel)]="property"></textarea>
+
+    </div>
+
+    <button pButton type="button" label="Submit"></button>
+</div>
+
+
+
+
+
+
+<div class="card">
+    <h1>DOCUMENTOS</h1>
+    <p-card (click)="showDialog(); colect(documento)" header="Nome" subheader="{{documento.nome}}" class="cardDoc"
+        [style]="{width: '360px'}" styleClass="ui-card-shadow" *ngFor="let documento of proposicao?.documentos">
+
+
+    </p-card>
+</div>
+
+
+
+
+<p-dialog [(visible)]="display" [modal]="true" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+
+    <p-card header="Documentação" subheader="Nº {{documento.id}}" class="cardDoc" [style]="{width: '360px'}">
+
+        <div>
+            <h2>Nome</h2>
+            <h3>{{ documento.nome }} </h3>
+            <h2>Texto</h2>
+            <div class="card">
+                <p>
+                    {{documento.texto}}
+                </p>
+            </div>
+
+        </div>
+
+    </p-card>
+
+
+    <p-footer>
+        <button type="button" pButton icon="pi pi-times" (click)="display=false" label="Fechar" class="but2"></button>
+
+    </p-footer>
+</p-dialog>

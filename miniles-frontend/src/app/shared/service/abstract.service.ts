@@ -31,7 +31,7 @@ export abstract class AbstractService {
     }
 
     filtrar<T>(object: Object, table: Table) {
-        return this.httpClient.get<Page<T>>(`${ this.url }/filtrar`,
+        return this.httpClient.get<Page<T>>(`${ this.url }`,
             { params: RequestUtil.concatParams([RequestUtil.getFilterParams(object), RequestUtil.getTableParams(table)]) });
     }
 
